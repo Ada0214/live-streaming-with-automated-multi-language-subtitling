@@ -91,7 +91,7 @@ LANGUAGE_CODES = {
 }
 
 
-# ==================================================================================
+# =================================================================================
 # Function: get_mediapackage_password
 # Purpose: MediaPackage Password is stored in SSM. I look there to get it in my code. 
 # Parameters: 
@@ -530,7 +530,7 @@ def send_master_manifest_to_mediapackage(s3_key, s3_version, pipe_number):
 #               languages - List containing language codes that you want.
 # ==================================================================================
 def make_all_transcriptions(text, languages):
-    source_lang = 'en'
+    source_lang = 'auto'
     transcripts = {}
     # Start all the threads
     for lang in languages:
